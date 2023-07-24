@@ -233,7 +233,7 @@
     font-family: "Roboto";
     font-size: 1rem;
     margin-left: 35%;
-    margin-top: -30% ;
+    margin-top: -32% ;
 }
 
 .titCarrito {
@@ -250,19 +250,49 @@
 
 .signoMinus {
     width: 8%;
-    background-color: #ea3b39;
-    display: inline;
+    margin-left: 35%;
+    margin-top: 3%;
+   
+}
+
+.numero {
+    font-size: 1.2rem;
+    margin-left: 50%;
+    margin-top: -8%;
 }
 
 .signoPlus {
     width: 8%;
-    background-color:aqua ;
-    display: inline;
+    margin-left: 60%;
+    margin-top: -26%;
+  
 }
 
 .trash {
     width: 8%;
-    margin-left: 75%;
-    margin-top: -60%;
+    margin-left: 85%;
+    margin-top: -64%;
+}
+
+.precio {
+    font-family: "Roboto";
+    margin-left: 80%;
+    margin-top: -13%;
+}
+
+.total {
+    margin-left: 6%;
+}
+
+.precioTotal {
+    margin-left: 80%;
+    margin-top: -11%;
+}
+
+.pagar {
+    background-color: #000000;
+    color: #FFFFFF;
+    padding: 2% 5% 2% 45%;
+    border-radius: 2%;
 }
 
