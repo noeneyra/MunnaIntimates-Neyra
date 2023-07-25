@@ -314,3 +314,32 @@
     margin-bottom: 1%;
     
 }
+
+/*GRACIAS*/
+
+.message {
+    text-align: center;
+    margin-top: 3%;
+    font-family: "Roboto";
+
+}
+
+.tituloG {
+    margin-bottom: 3%;
+    color: #f22771;
+    font-size: 2rem;
+}
+
+.subtituloG {
+    margin-bottom: 3%;
+    color: #f22771;
+    font-size: 1.5rem;
+}
+
+.mensajeG {
+    font-size: 1.5rem;
+}
+
+.buton {
+    margin-top: 3%;
+}
