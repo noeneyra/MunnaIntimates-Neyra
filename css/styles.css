@@ -145,6 +145,42 @@
     
 }
 
+/*PORTADA*/
+
+.tituloPortada {
+    margin-top: 6%;
+    color: #f22771;
+    text-align: center;
+    font-size: 1.5rem;
+    font-family: "Roboto";
+    font-weight: 400 ;
+}
+
+@keyframes changeColor {
+    0% { color:#f22771 ; }
+    50% { color:#f09ab7; }
+    100% { color:#000000 }
+}
+
+.hover-infinite {
+    animation: changeColor 0.5s infinite;
+  }
+
+.portada{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    display: block;
+    margin: auto;
+    margin-top: 2%;
+
+}
+
+.destacados {
+    font-family: "Roboto";
+    font-size: 2rem;
+    text-align: center;
+    margin-top: 5%;
+    color: #f22771;
+}
 
 /*CARDS*/
 
@@ -152,12 +188,14 @@
     display:flex;
     flex-direction: row;
     flex-wrap: wrap;
+    width: 100%;
+    margin-top: 10%;
+    margin-left: 2%;
+    
 }
 
 .flex-child{
     flex:1;
-    width: 30%;
-    margin:5%;
 }
 
 .card {
@@ -167,6 +205,7 @@
     margin-left: 4%;
     text-align: center;
     font-family: arial;
+
 }
 
 .price {
@@ -195,8 +234,9 @@
 
 .carrito {
     border-color: #000000; 
-    margin: -30% 2% 0% 80%;  
+    margin: -91% 2% 0% 83%;  
     border-radius: 5%;
+    position:fixed ;
 }
 
 .imgCarrito {
@@ -241,7 +281,7 @@
 .signoPlus {
     width: 8%;
     margin-left: 60%;
-    margin-top: -26%;
+    margin-top: -32%;
   
 }
 

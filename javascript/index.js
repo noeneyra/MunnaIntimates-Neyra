@@ -18,7 +18,6 @@ function initProducts(){
          '<p><button id="'+ element.id+ '" onClick="addCarrito()">Agregar al carrito</button></p>'+
          '</div>';
         const el = document.createElement('div');
-        el.classList.add('flex-container');
         el.innerHTML = card; 
         ele.appendChild(el);
     });
@@ -84,6 +83,11 @@ function addCarrito(){
             inner.innerHTML += innerCarrito;
         }
     }
+
+    const elementTwo = document.getElementById('items');
+    console.log(elementTwo);
+    elementTwo.style.width = '80%';
+
 }
 
 function addItem(idFound){
@@ -125,6 +129,9 @@ function borrarItem(found){
     if(prendasSeleccionadas.length == 0){
         const carrito = document.getElementById('carrito');
         carrito.remove();
+        const elementTwo = document.getElementById('items');
+        console.log(elementTwo);
+        elementTwo.style.width = '100%';
     }
 }
 
