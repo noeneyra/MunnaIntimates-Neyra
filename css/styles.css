@@ -87,34 +87,23 @@
 
 @media (min-width:1400px){
 
-    .mobile {
-        display: none !important;
-    }
-
-    .desktop {
-        display: initial !important;
-    }
-
     .navbar {
         display: flex;
         align-items: center ;
         justify-content: space-between;
-        background-color: #f09ab7;
+        background-color: #f09ab7 !important;
         color: #FFFFFF;
-        font-family: 'Poppins', sans-serif;
-       
+        font-family: "Roboto";
+        --bs-navbar-nav-link-padding-x: 1rem;
     }
-    
-    .navbar .bg {
-        margin-right: 40%;
-        margin-top: 0.4%;
+
+    .logo {
+        margin-left: 60%;
     }
-    
-    .navbar img.logo {
-        width: 15%;
-        margin-left: 10%;
-        margin-top: 2%;
-        margin-bottom: 2%;
+
+    .navbar-collapse{
+        flex-grow: 0;
+        margin-right: 5%;
     }
     
     .imgZoom {
@@ -125,62 +114,51 @@
     .imgZoom:hover {
         transform: scale(1.1) ;
     }
-    
-    .navbar nav ul {
-        list-style: none;
-        display: flex;
-        margin: 0;
-        padding: 0;
-    }
-    
-    .navbar nav ul li {
-        margin-right: 10px;
-    }
-    
-    .link{
+
+    .btn-outline-success {
+        --bs-btn-hover-bg: #f22771 ; 
+        --bs-btn-color: #f22771;
+        --bs-btn-hover-border-color: #f22771;
+        --bs-btn-border-color: #FFFFFF;
         color: #FFFFFF;
-        list-style: none;
-        text-decoration: none;
-        margin-right: 10px;
+    }
+
+    .form-control:focus{
+        border-color: #f2277146;
+        outline:0;
+        -webkit-box-shadow:none;
+        box-shadow:none; 
+    }
+
+    .nav-link {
+        color:#FFFFFF ;
     }
     
-    .link:hover {
-        color: #ea3b39
+    
+
+    .nav-link:hover{
+        color: #f22771;
     }
     
-    .navbar .lupa {
-        margin-left: 23%;
-        width: 35%;
-        height: 35%;
-    }
+
     
-    .buscar{
-        font-family: 'Poppins', sans-serif;
-        font-size: 0.9rem;
-        color: #FFFFFF;
-        margin-right: 50%;
-        margin-top:2%;
-        margin-bottom: 2%;
-    }
-    
-    .buscador {
-        display: flex;
-        align-items: center ;
-        justify-content: space-between;
-        border-radius: 24px;
-        width: 10%;
-        margin-right: 5%;
-    
-    }
-    
-    .buscador:hover {
-        background-color: #ffffff28;
-        border-radius: 24px;
-    }
     
 }
 
+
 /*CARDS*/
+
+.flex-container{
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.flex-child{
+    flex:1;
+    width: 30%;
+    margin:5%;
+}
 
 .card {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
