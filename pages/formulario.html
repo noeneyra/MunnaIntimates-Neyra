@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="en">
     <head>
         <meta charset="UTF-8">
@@ -19,7 +18,7 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
         <script src="/javascript/index.js" ></script>
         <!-- CSS -->
-        <link rel="stylesheet" href="/css/styles.css">
+        <link rel="stylesheet" href="../css/styles.css">
         <!-- Título -->
         <title>Munna Intimates</title>
     </head>
@@ -32,7 +31,7 @@
                 <section class="desktop">
                     <div class="navbar">
                         <div class="bg">
-                            <img href="../index.html" src="./images/logoMunna (2).jpg" class="logo imgZoom" alt="">
+                            <img href="../index.html" src="../images/logoMunna (2).jpg" class="logo imgZoom" alt="">
                         </div>
                         <div>
                             <nav>
@@ -45,7 +44,7 @@
                         </div>
                         <div class="buscador">
                             <div>
-                                <img src="./images/search.png" class="lupa" alt="">
+                                <img src="../images/search.png" class="lupa" alt="">
                             </div>
                             <div class="buscar">BUSCAR</div>
                         </div>
@@ -54,28 +53,46 @@
                 <nav class="mobile navbar bg-body-tertiary fixed-top">
                     <div class="container">
                         <div class="col">
-                            <a href="/index.html"><img src="/images/logoMunna (2).jpg" class="logo imgZoom navbar-brand" alt="Logo de la marca"/></a>
+                            <a href="/index.html"><img src="../images/logoMunna (2).jpg" class="logo imgZoom navbar-brand" alt="Logo de la marca"/></a>
                         </div>
                         <div class="col menu-toggle">
-                            <img src="/images/menu.png" class="tamMenu" alt="">
+                            <img src="../images/menu.png" class="tamMenu" alt="">
                             <div class="menu-content">
                                 <ul>
                                     <li><a href="">INICIO</a></li>
                                     <li><a href="">COMPRAR</a></li>
-                                    <li><a href=""><img src="/images/search.png" class="lupa" alt="">BUSCAR</a></li>
+                                    <li><a href=""><img src="../images/search.png" class="lupa" alt="">BUSCAR</a></li>
                                 </ul>
                             </div>
                         </div>
                     </div>
                 </nav>
             </header>
-            <!-- Section -->
-            <div class="card imgZoom">
-                <img src="/images/SetAshley.jpeg" alt="Set Ashley" style="width:100%">
-                <h1>Set Ashley</h1>
-                <p class="price">$4.800</p>
-                <p><button>Agregar al carrito</button></p>
-            </div>
-        </main>
+        <!-- Formulario de envíos -->
+        <h1 class="formTitulo">Formulario de Envios</h1>
+        <form action="/procesar_formulario" method="post" class="form">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" class="input" name="nombre" required>
+            <br>
+            <label for="apellido">Apellido:</label>
+            <input type="text" id="apellido" class="input" name="apellido" required>
+            <br>
+            <label for="documento">Documento:</label>
+            <input type="text" id="documento" class="input" name="documento" required>
+            <br>
+            <label for="telefono">Teléfono:</label>
+            <input type="tel" id="telefono" class="input" name="telefono" required>
+            <br>
+            <label for="direccion">Dirección:</label>
+            <input type="text" id="direccion" class="input" name="direccion" required>
+            <br>
+            <label class="input" for="metodo_pago">Método de Pago:</label>
+            <span>Acuerda con el vendedor</span>
+            <br>
+            <label class="input" for="costo_envio">Costo de Envío:</label>
+            <span>Acuerda con el vendedor</span>
+            <br>
+            <a href="../pages/gracias.html"><input type="submit" value="Enviar"></a>
+        </form>
     </body>
-</html>
+</html>    
