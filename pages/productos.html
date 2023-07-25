@@ -1,40 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,900&family=Spinnaker&display=swap" rel="stylesheet">
-    <script src="./javascript/index.js" ></script>
-    <link rel="stylesheet" href="/css/styles.css">
-    <title>Munna Intimates</title>
-</head>
-<body>
-    <main>
-        <header>
-            <div class="navbar">
-                <div class="bg">
-                    <img href="/index.html" src="/images/logoMunna (2).jpg" class="logo imgZoom" alt="">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Fuentes -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,900&family=Spinnaker&display=swap" rel="stylesheet">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+        <!-- Icon -->
+        <link rel="icon" type="image/png" sizes="16x16" href="/images/LogosRedondosMunna/favicon-16x16.png">
+        <link rel="manifest" href="/manifest.json">
+        <meta name="msapplication-TileColor" content="#ffffff">
+        <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+        <meta name="theme-color" content="#ffffff">
+        <!-- Bootstrap -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+        <script src="/javascript/index.js" ></script>
+        <!-- CSS -->
+        <link rel="stylesheet" href="../css/styles.css">
+        <!-- Título -->
+        <title>Munna Intimates</title>
+    </head>
+    <!-- Body -->
+    <body>
+        <!-- Main -->
+        <main>
+            <!-- Header -->
+            <header>
+                <section class="desktop">
+                    <div class="navbar">
+                        <div class="bg">
+                            <img href="../index.html" src="../images/logoMunna (2).jpg" class="logo imgZoom" alt="">
+                        </div>
+                        <div>
+                            <nav>
+                                <ul>
+                                    <li><a href="/index.html" class="link">INICIO</a></li>
+                                    <li><a href="/pages/productos.html" class="link">PRODUCTOS</a></li>
+                                    <li><a href="/pages/comprar.html" class="link">CÓMO COMPRAR</a></li>
+                                </ul>
+                            </nav>
+                        </div>
+                        <div class="buscador">
+                            <div>
+                                <img src="../images/search.png" class="lupa" alt="">
+                            </div>
+                            <div class="buscar">BUSCAR</div>
+                        </div>
+                    </div>
+                </section>
+                <nav class="mobile navbar bg-body-tertiary fixed-top">
+                    <div class="container">
+                        <div class="col">
+                            <a href="/index.html"><img src="../images/logoMunna (2).jpg" class="logo imgZoom navbar-brand" alt="Logo de la marca"/></a>
+                        </div>
+                        <div class="col menu-toggle">
+                            <img src="../images/menu.png" class="tamMenu" alt="">
+                            <div class="menu-content">
+                                <ul>
+                                    <li><a href="">INICIO</a></li>
+                                    <li><a href="">COMPRAR</a></li>
+                                    <li><a href=""><img src="../images/search.png" class="lupa" alt="">BUSCAR</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+            </header>
+            <!-- Carrito de compras -->
+            <div class="carrito">
+                <div class="titCarrito">
+                    Tu carrito
                 </div>
                 <div>
-                    <nav>
-                        <ul>
-                            <li><a href="/index.html" class="link">INICIO</a></li>
-                            <li><a href="/pages/productos.html" class="link">PRODUCTOS</a></li>
-                            <li><a href="/pages/comprar.html" class="link">CÓMO COMPRAR</a></li>
-                        </ul>
-                    </nav>
-                </div>
-                <div class="buscador">
-                    <div>
-                        <img src="/images/search.png" class="lupa" alt="">
+                    <img src="../images/SetAshley.jpeg" class="imgCarrito" alt="Set Ashley">
+                    <h1 class="nombre">Set Ashley</h1>
+                    <div class="infoCarrito">
+                        <img src="../images/minus.png" class="signoMinus" alt="minus">
+                        <p class="numero">1</p>
+                        <img src="../images/plus.png" class="signoPlus" alt="plus">
+                        <img src="../images/trash.png" class="trash" alt="Trash">
+                        <p class="precio">$4.800</p>
                     </div>
-                    <div class="buscar">BUSCAR</div>
+                </div>
+                <div>
+                    <hr style="width:100%", size="4", color=black>
+                    <p class="total">Total:</p>
+                    <p class="precioTotal">$4.800</p>
+                    <p class="pagar">Pagar</p>
                 </div>
             </div>
-        </header>
-    </main>
-</body>
+        </main>
+    </body>
 </html>
