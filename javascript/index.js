@@ -50,6 +50,7 @@ function addCarrito(){
                             '<img src="/images/plus.png" onclick="addItem(\'' + found.id + '\')" class="signoPlus" alt="plus">'+
                             '<img src="/images/trash.png" onclick="borrarItem(\'' + found.id + '\')" class="trash hover" alt="Trash">'+
                             '<p class="precio" id="'+idPre+'">$' + found.price+'</p>'+
+                            '<hr style="width:80%;margin-left:10%", size="1", color=black>'+
                         '</div>'+
                         '</div>';
 
@@ -58,8 +59,8 @@ function addCarrito(){
                             'Tu carrito' +
                         '</div>'+
                         '<div id="innerCarrito" class="overflow-scroll">' + innerCarrito + '</div>'+
-                        '<div>'+
-                            '<hr style="width:100%", size="4", color=black>'+
+                        '<div class="pagos">'+
+                            '<hr style="width:100%", size="1", color=black>'+
                             '<p class="total">Total:</p>'+
                             '<p class="precioTotal">$'+totalCarrito+'</p>'+
                             '<p class="pagar">Pagar</p>'+
@@ -68,6 +69,7 @@ function addCarrito(){
    
     if(prendasSeleccionadas.length == 1){
         const el = document.createElement('div');
+        el.style.position = 'relative';
         el.removeAttribute('hidden');
         el.innerHTML = bodyCard;
         element.appendChild(el);

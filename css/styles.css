@@ -245,13 +245,15 @@
 /*CARRITO*/
 
 .carrito {
-    position: absolute;
+    position:fixed;
     background-color: #FFFFFF;
-    width: 15%; 
-    height: 115%; 
+    width: 300px; 
+    height: 500px; 
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     overflow-y: auto;
     z-index: 1;
+    bottom: 150px;
+    right: 25px;
     
 }
 
@@ -261,7 +263,7 @@
 
 #innerCarrito {
     background-color: #FFFFFF;
-    max-height: 40%; 
+    max-height: 55%; 
     overflow-y: auto; 
 }
 
@@ -289,6 +291,7 @@
 
 .infoCarrito {
     display: inline;
+    margin-top: 0%;
 }
 
 .signoMinus {
@@ -322,7 +325,7 @@
 .trash {
     width: 8%;
     margin-left: 85%;
-    margin-top: -64%;
+    margin-top: -75%;
 }
 
 .trash:hover {
@@ -332,16 +335,18 @@
 .precio {
     font-family: "Roboto";
     margin-left: 80%;
-    margin-top: -13%;
+    margin-bottom: 1%;
+    margin-top: -20%;
 }
 
 .total {
     margin-left: 6%;
+    margin-top: 8%;
 }
 
 .precioTotal {
     margin-left: 80%;
-    margin-top: -11%;
+    margin-top: -14%;
 }
 
 .pagar {
@@ -349,6 +354,8 @@
     color: #FFFFFF;
     padding: 4% 5% 4% 45%;
     border-radius: 2%;
+    margin-top: 16%;
+    margin-bottom: -5%;
 }
 
 
