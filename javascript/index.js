@@ -49,15 +49,15 @@ function addCarrito(){
                             '<p class="numero" id="'+ idOcu +'">'+ 1 +'</p>'+
                             '<img src="/images/plus.png" onclick="addItem(\'' + found.id + '\')" class="signoPlus" alt="plus">'+
                             '<img src="/images/trash.png" onclick="borrarItem(\'' + found.id + '\')" class="trash hover" alt="Trash">'+
-                            '<p class="precio" id="'+idPre+'">' + found.price+'</p>'+
+                            '<p class="precio" id="'+idPre+'">$' + found.price+'</p>'+
                         '</div>'+
                         '</div>';
 
-    const bodyCard = '<div id="carrito" class="carrito">'+
+    const bodyCard = '<div id="carrito" class="carrito fixed">'+
                         '<div class="titCarrito">'+
                             'Tu carrito' +
-                        '</div id="innerCarrito">'+
-                        '<div id="innerCarrito">' + innerCarrito + '</div>'
+                        '</div>'+
+                        '<div id="innerCarrito" class="overflow-scroll">' + innerCarrito + '</div>'+
                         '<div>'+
                             '<hr style="width:100%", size="4", color=black>'+
                             '<p class="total">Total:</p>'+

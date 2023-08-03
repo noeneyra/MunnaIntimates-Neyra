@@ -245,10 +245,24 @@
 /*CARRITO*/
 
 .carrito {
-    border-color: #000000; 
-    margin: -91% 2% 0% 83%;  
-    border-radius: 5%;
-    position:fixed ;
+    position: absolute;
+    background-color: #FFFFFF;
+    width: 15%; 
+    height: 115%; 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    overflow-y: auto;
+    z-index: 1;
+    
+}
+
+#container {
+    display: flex;
+  }
+
+#innerCarrito {
+    background-color: #FFFFFF;
+    max-height: 40%; 
+    overflow-y: auto; 
 }
 
 .imgCarrito {
@@ -297,7 +311,7 @@
 .signoPlus {
     width: 8%;
     margin-left: 60%;
-    margin-top: -32.5%;
+    margin-top: -34%;
   
 }
 
@@ -333,7 +347,7 @@
 .pagar {
     background-color: #000000;
     color: #FFFFFF;
-    padding: 2% 5% 2% 45%;
+    padding: 4% 5% 4% 45%;
     border-radius: 2%;
 }
 
