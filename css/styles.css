@@ -123,6 +123,10 @@
         color: #FFFFFF;
     }
 
+    .form-control{
+        font-size: 0.8rem;
+    }
+
     .form-control:focus{
         border-color: #f2277146;
         outline:0;
@@ -184,12 +188,20 @@
 
 /*CARDS*/
 
+.productosTitulo {
+    font-family: "Roboto";
+    font-size: 2rem;
+    text-align: center;
+    margin: 8% 0% 0% 0%;
+    color: #f22771;
+}
+
 .flex-container{
     display:flex;
     flex-direction: row;
     flex-wrap: wrap;
     width: 100%;
-    margin-top: 10%;
+    margin-top: 4%;
     margin-left: 2%;
     
 }
@@ -272,6 +284,10 @@
    
 }
 
+.signoMinus:hover {
+    filter: drop-shadow(0 2px 5px rgba(0, 0, 0, 0.7));
+}
+
 .numero {
     font-size: 1.2rem;
     margin-left: 50%;
@@ -281,14 +297,22 @@
 .signoPlus {
     width: 8%;
     margin-left: 60%;
-    margin-top: -32%;
+    margin-top: -32.5%;
   
+}
+
+.signoPlus:hover { 
+    filter: drop-shadow(0 2px 5px rgba(0, 0, 0, 0.7));
 }
 
 .trash {
     width: 8%;
     margin-left: 85%;
     margin-top: -64%;
+}
+
+.trash:hover {
+    filter: drop-shadow(0 2px 5px rgba(0, 0, 0, 0.7)); 
 }
 
 .precio {
@@ -360,4 +384,52 @@
 
 .buton {
     margin-top: 3%;
+}
+
+/*FOOTER*/
+
+.tamI {
+    align-items: center;
+    width: 58%;
+    padding-top: 40%;
+    margin-top: 10%;
+}
+ 
+.footer {
+    padding: 10px 0;
+    background-color: #000000;
+    margin: 2% 0% 0% 0%;
+    filter: drop-shadow(0 2px 5px rgba(0, 0, 0, 0.7));
+}
+
+.textoFooter {
+    color: #FFFFFF;
+    text-align: center;
+}
+  
+.footer .social {
+    text-align: center;
+    justify-content: end;
+    padding-bottom: 25px;
+    margin-left: 1%;
+}
+  
+.footer .social a {
+    font-size: 24px;
+    border: 1px solidcolor #FFFFFF;
+    width: 40px;
+    height: 40px;
+    display: inline-block;
+}
+  
+.footer .social a:hover {
+    opacity: 0.5;
+}
+  
+.footer .copyright {
+    font-family: "Roboto";
+    margin-top: 15px;
+    text-align: center;
+    font-size: 13px;
+    color: #aaa;
 }

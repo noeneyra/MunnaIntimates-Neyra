@@ -48,7 +48,7 @@ function addCarrito(){
                             '<img src="/images/minus.png" onclick="removeItem(\'' + found.id + '\')" class="signoMinus" alt="minus">'+
                             '<p class="numero" id="'+ idOcu +'">'+ 1 +'</p>'+
                             '<img src="/images/plus.png" onclick="addItem(\'' + found.id + '\')" class="signoPlus" alt="plus">'+
-                            '<img src="/images/trash.png" onclick="borrarItem(\'' + found.id + '\')" class="trash" alt="Trash">'+
+                            '<img src="/images/trash.png" onclick="borrarItem(\'' + found.id + '\')" class="trash hover" alt="Trash">'+
                             '<p class="precio" id="'+idPre+'">' + found.price+'</p>'+
                         '</div>'+
                         '</div>';
