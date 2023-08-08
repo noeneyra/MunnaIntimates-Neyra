@@ -361,22 +361,31 @@
 
 /*FORMULARIO DE ENVIOS*/
 
+.margin {
+    margin: 3% 10% 0% 10%;
+    font-family: "Roboto";
+    font-weight: 300;
 
-.form {
-    text-align: center;
-    margin-top: 3%;
 }
 
-.input {
-    margin-bottom: 1%;
-    
+.btn-primary {
+    --bs-btn--color: #f22771 ;
+    --bs-btn-bg: #f09ab7;
+    --bs-btn-border-color: #f09ab7;
+    --bs-btn-hover-bg: #f22771;
+    --bs-btn-hover-border-color: #f22771;
+    --bs-btn-active-bg: #f09ab7;
+    --bs-btn-disabled-bg: #f09ab7;
 }
+
+
+
 
 /*GRACIAS*/
 
 .message {
     text-align: center;
-    margin-top: 3%;
+    margin-top: 8%;
     font-family: "Roboto";
 
 }

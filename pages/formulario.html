@@ -55,30 +55,35 @@
         </section>
         <!-- Section -->
         <!-- Formulario de envíos -->
-        <h1 class="productosTitulo">F O R M U L A R I O   D E   E N V I O S</h1>
-        <form action="/procesar_formulario" method="post" class="form">
-            <label for="nombre">Nombre:</label>
-            <input type="text" id="nombre" class="input" name="nombre" required>
-            <br>
-            <label for="apellido">Apellido:</label>
-            <input type="text" id="apellido" class="input" name="apellido" required>
-            <br>
-            <label for="documento">Documento:</label>
-            <input type="text" id="documento" class="input" name="documento" required>
-            <br>
-            <label for="telefono">Teléfono:</label>
-            <input type="tel" id="telefono" class="input" name="telefono" required>
-            <br>
-            <label for="direccion">Dirección:</label>
-            <input type="text" id="direccion" class="input" name="direccion" required>
-            <br>
-            <label class="input" for="metodo_pago">Método de Pago:</label>
-            <span>Acuerda con el vendedor</span>
-            <br>
-            <label class="input" for="costo_envio">Costo de Envío:</label>
-            <span>Acuerda con el vendedor</span>
-            <br>
-            <a href="../pages/gracias.html"><input type="submit" value="Enviar"></a>
-        </form>
+        <h1 class="productosTitulo">C O N T A C T O</h1>
+        <form class="row g-3 margin">
+            <div class="col-md-6">
+              <label for="inputName" class="form-label">Nombre y Apellido</label>
+              <input type="name" class="form-control" id="inputName">
+            </div>
+            <div class="col-md-6">
+              <label for="inputDocumennt" class="form-label">Documento</label>
+              <input type="password" class="form-control" id="inputDocumennt">
+            </div>
+            <div class="col-12">
+              <label for="inputPhoneNumber" class="form-label">Teléfono</label>
+              <input type="text" class="form-control" id="inputPhoneNumber" placeholder="">
+            </div>
+            <div class="col-12">
+              <label for="inputAddress2" class="form-label">Dirección</label>
+              <input type="text" class="form-control" id="inputAddress2" placeholder="">
+            </div>
+            <div class="col-md-6">
+              <label for="inputAcuerdas con el vendedor" class="form-label">Método de pago</label>
+              <input type="text" class="form-control" id="inputAcuerdas con el vendedor" placeholder="Acuerdas con el vendedor">
+            </div>
+            <div class="col-md-6">
+                <label for="inputAcuerdas con el vendedor" class="form-label">Costo de envío</label>
+                <input type="text" class="form-control" id="inputAcuerdas con el vendedor" placeholder="Acuerdas con el vendedor">
+              </div>
+            <div class="col-12">
+              <a href="/pages/gracias.html"><button type="submit" class="btn btn-primary">Enviar</button></a>
+            </div>
+          </form>
     </body>
 </html>    
