@@ -2,22 +2,18 @@
 
 /*NAVBAR*/
 
-@media (max-width: 576px){
+@media (max-width: 575px){
 
-    .mobile {
-        display: initial !important;
+    .navbar-toggler {
+        color: #000000;
+        border: none;
+        font-family: "Roboto";
     }
 
-    .desktop {
-        display: none !important;
-    }
-
-    .logo {
-        width: 30%;
-        display: block;
-        margin-left: 10%;
-        margin-top: 2%;
-        margin-bottom: 2%;
+    .navbar-toggler:focus {
+        text-decoration: none;
+        outline: none;
+        box-shadow: none;
     }
 
     .tamMenu {
@@ -67,10 +63,10 @@
         display: block;
     }
 
-    .menu-content ul {
+    /* .menu-content ul {
         list-style: none;
         padding: 0;
-    }
+    } */
 
     .menu-content ul li {
         margin-bottom: 10px;
@@ -80,11 +76,62 @@
         text-decoration: none;
         color: #fff;
     }
+
+    .logo {
+        margin-left: 60%;
+    }
+
+    .navbar-collapse{
+        flex-grow: 0;
+        margin-right: 5%;
+    }
+    
+    .imgZoom {
+        cursor: pointer;
+        transition: transform 0.2s ease;
+    }
+    
+    .imgZoom:hover {
+        transform: scale(1.1) ;
+    }
+
+    .btn-outline-success {
+        --bs-btn-hover-bg: #f22771 ; 
+        --bs-btn-color: #f22771;
+        --bs-btn-hover-border-color: #f22771;
+        --bs-btn-border-color: #FFFFFF;
+        color: #FFFFFF;
+    }
+
+    .form-control{
+        font-size: 0.8rem;
+    }
+
+    .form-control:focus{
+        border-color: #f2277146;
+        outline:0;
+        -webkit-box-shadow:none;
+        box-shadow:none; 
+    }
+
+    .nav-link {
+        color:#FFFFFF ;
+    }
+    
+    
+
+    .nav-link:hover{
+        color: #f22771;
+    }
     
     
     
 }
-
+@media (min-width:576px) and (max-width: 767px){
+}
+@media (min-width:768px) and (max-width:991px) {}
+@media (min-width:992px) and (max-width:1199px) {}
+@media (min-width:1200px) and (max-width:1399px) {}
 @media (min-width:1400px){
 
     .navbar {
@@ -151,6 +198,13 @@
 
 /*PORTADA*/
 
+@media (max-width: 575px){}
+@media (min-width:576px) and (max-width:767px) {}
+@media (min-width:768px) and (max-width:991px) {}
+@media (min-width:992px) and (max-width:1199px) {}
+@media (min-width:1200px) and (max-width:1399px) {}
+@media (min-width:1400px){}
+
 .tituloPortada {
     margin-top: 8%;
     color: #f22771;
@@ -187,6 +241,13 @@
 }
 
 /*CARDS*/
+
+@media (max-width: 575px){}
+@media (min-width:576px) and (max-width:767px) {}
+@media (min-width:768px) and (max-width:991px) {}
+@media (min-width:992px) and (max-width:1199px) {}
+@media (min-width:1200px) and (max-width:1399px) {}
+@media (min-width:1400px){}
 
 .productosTitulo {
     font-family: "Roboto";
@@ -243,6 +304,13 @@
 
 
 /*CARRITO*/
+
+@media (max-width: 575px){}
+@media (min-width:576px) and (max-width:767px) {}
+@media (min-width:768px) and (max-width:991px) {}
+@media (min-width:992px) and (max-width:1199px) {}
+@media (min-width:1200px) and (max-width:1399px) {}
+@media (min-width:1400px){}
 
 .carrito {
     position:fixed;
@@ -361,6 +429,13 @@
 
 /*FORMULARIO DE ENVIOS*/
 
+@media (max-width: 575px){}
+@media (min-width:576px) and (max-width:767px) {}
+@media (min-width:768px) and (max-width:991px) {}
+@media (min-width:992px) and (max-width:1199px) {}
+@media (min-width:1200px) and (max-width:1399px) {}
+@media (min-width:1400px){}
+
 .margin {
     margin: 3% 10% 0% 10%;
     font-family: "Roboto";
@@ -382,6 +457,13 @@
 
 
 /*GRACIAS*/
+
+@media (max-width: 575px){}
+@media (min-width:576px) and (max-width:767px) {}
+@media (min-width:768px) and (max-width:991px) {}
+@media (min-width:992px) and (max-width:1199px) {}
+@media (min-width:1200px) and (max-width:1399px) {}
+@media (min-width:1400px){}
 
 .message {
     text-align: center;
@@ -411,6 +493,13 @@
 }
 
 /*FOOTER*/
+
+@media (max-width: 575px){}
+@media (min-width:576px) and (max-width:767px) {}
+@media (min-width:768px) and (max-width:991px) {}
+@media (min-width:992px) and (max-width:1199px) {}
+@media (min-width:1200px) and (max-width:1399px) {}
+@media (min-width:1400px){}
 
 .tamI {
     align-items: center;
