@@ -117,190 +117,70 @@
 
 /*CARDS*/
 
-@media (max-width: 575px){}
-@media (min-width:576px) and (max-width:767px) {}
-@media (min-width:768px) and (max-width:991px) {}
 @media (min-width:992px) and (max-width:1199px) {}
 @media (min-width:1200px) and (max-width:1399px) {}
-@media (min-width:1400px){}
+@media (min-width:1400px){
 
-.productosTitulo {
-    font-family: "Roboto";
-    font-size: 2rem;
-    text-align: center;
-    margin: 8% 0% 0% 0%;
-    color: #f22771;
-}
-
-.flex-container{
-    display:flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    width: 100%;
-    margin-top: 4%;
-    margin-left: 2%;
+    .productosTitulo {
+        font-family: "Roboto";
+        font-size: 2rem;
+        text-align: center;
+        margin: 8% 0% 0% 0%;
+        color: #f22771;
+    }
     
+    .flex-container{
+        display:flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: 100%;
+        margin-top: 4%;
+        margin-left: 2%;
+        
+    }
+    
+    .flex-child{
+        flex:1;
+    }
+    
+    .card {
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        max-width: 300px;
+        margin-top: 4%;
+        margin-left: 4%;
+        text-align: center;
+        font-family: arial;
+    
+    }
+    
+    .price {
+        color: grey;
+        font-size: 22px;
+    }
+      
+    .card button {
+        border: none;
+        outline: 0;
+        padding: 12px;
+        color: white;
+        background-color: #000;
+        text-align: center;
+        cursor: pointer;
+        width: 100%;
+        font-size: 18px;
+    }
+      
+    .card button:hover {
+        opacity: 0.7;
+    }
+
 }
 
-.flex-child{
-    flex:1;
-}
 
-.card {
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    max-width: 300px;
-    margin-top: 4%;
-    margin-left: 4%;
-    text-align: center;
-    font-family: arial;
-
-}
-
-.price {
-    color: grey;
-    font-size: 22px;
-}
-  
-.card button {
-    border: none;
-    outline: 0;
-    padding: 12px;
-    color: white;
-    background-color: #000;
-    text-align: center;
-    cursor: pointer;
-    width: 100%;
-    font-size: 18px;
-}
-  
-.card button:hover {
-    opacity: 0.7;
-}
 
 
 /*CARRITO*/
 
-@media (max-width: 575px){
-    
-    .carrito {
-        position: relative;
-        background-color: #FFFFFF;
-        width: 300px; 
-        height: 500px; 
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        overflow-y: auto;
-        z-index: 1;
-        bottom: 500px;
-        right: 25px;
-        
-    }
-
-    #container {
-        display: flex;
-    }
-
-    #innerCarrito {
-        background-color: #FFFFFF;
-        max-height: 55%; 
-        overflow-y: auto; 
-    }
-
-    .imgCarrito {
-        width: 25%;
-        margin-left: 5%;
-        margin-top: 5%;
-
-    }
-
-    .nombre {
-        font-family: "Roboto";
-        font-size: 1rem;
-        margin-left: 35%;
-        margin-top: -32% ;
-    }
-
-    .titCarrito {
-        background-color: #000000;
-        border-radius: 2%;
-        color: #FFFFFF;
-        font-family: "Roboto";
-        padding: 5% 0% 5% 40% ;
-    }
-
-    .infoCarrito {
-        display: inline;
-        margin-top: 0%;
-    }
-
-    .signoMinus {
-        width: 8%;
-        margin-left: 35%;
-        margin-top: 3%;
-    
-    }
-
-    .signoMinus:hover {
-        filter: drop-shadow(0 2px 5px rgba(0, 0, 0, 0.7));
-    }
-
-    .numero {
-        font-size: 1.2rem;
-        margin-left: 50%;
-        margin-top: -8%;
-    }
-
-    .signoPlus {
-        width: 8%;
-        margin-left: 60%;
-        margin-top: -34%;
-    
-    }
-
-    .signoPlus:hover { 
-        filter: drop-shadow(0 2px 5px rgba(0, 0, 0, 0.7));
-    }
-
-    .trash {
-        width: 8%;
-        margin-left: 85%;
-        margin-top: -75%;
-    }
-
-    .trash:hover {
-        filter: drop-shadow(0 2px 5px rgba(0, 0, 0, 0.7)); 
-    }
-
-    .precio {
-        font-family: "Roboto";
-        margin-left: 80%;
-        margin-bottom: 1%;
-        margin-top: -20%;
-    }
-
-    .total {
-        margin-left: 6%;
-        margin-top: 8%;
-    }
-
-    .precioTotal {
-        margin-left: 80%;
-        margin-top: -14%;
-    }
-
-    .pagar {
-        background-color: #000000;
-        color: #FFFFFF;
-        padding: 4% 5% 4% 45%;
-        border-radius: 2%;
-        margin-top: 16%;
-        margin-bottom: -5%;
-    }
-
-
-
-}
-@media (min-width:576px) and (max-width:767px) {}
-@media (min-width:768px) and (max-width:991px) {}
 @media (min-width:992px) and (max-width:1199px) {}
 @media (min-width:1200px) and (max-width:1399px) {}
 @media (min-width:1400px){
@@ -433,29 +313,31 @@
 
 /*FORMULARIO DE ENVIOS*/
 
-@media (max-width: 575px){}
-@media (min-width:576px) and (max-width:767px) {}
-@media (min-width:768px) and (max-width:991px) {}
+
 @media (min-width:992px) and (max-width:1199px) {}
 @media (min-width:1200px) and (max-width:1399px) {}
-@media (min-width:1400px){}
+@media (min-width:1400px){
 
-.margin {
-    margin: 3% 10% 0% 10%;
-    font-family: "Roboto";
-    font-weight: 300;
+    .margin {
+        margin: 3% 10% 0% 10%;
+        font-family: "Roboto";
+        font-weight: 300;
+    
+    }
+    
+    .btn-primary {
+        --bs-btn--color: #f22771 ;
+        --bs-btn-bg:#f22771;
+        --bs-btn-border-color: #f09ab7;
+        --bs-btn-hover-bg:#f09ab7;
+        --bs-btn-hover-border-color: #f22771;
+        --bs-btn-active-bg: #f09ab7;
+        --bs-btn-disabled-bg: #f09ab7;
+    }
 
 }
 
-.btn-primary {
-    --bs-btn--color: #f22771 ;
-    --bs-btn-bg:#f22771;
-    --bs-btn-border-color: #f09ab7;
-    --bs-btn-hover-bg:#f09ab7;
-    --bs-btn-hover-border-color: #f22771;
-    --bs-btn-active-bg: #f09ab7;
-    --bs-btn-disabled-bg: #f09ab7;
-}
+
 
 
 
@@ -465,46 +347,46 @@
 
 /*GRACIAS*/
 
-@media (max-width: 575px){}
-@media (min-width:576px) and (max-width:767px) {}
-@media (min-width:768px) and (max-width:991px) {}
+
 @media (min-width:992px) and (max-width:1199px) {}
 @media (min-width:1200px) and (max-width:1399px) {}
-@media (min-width:1400px){}
+@media (min-width:1400px){
 
-.message {
-    text-align: center;
-    margin-top: 8%;
-    font-family: "Roboto";
+    .message {
+        text-align: center;
+        margin-top: 8%;
+        font-family: "Roboto";
+    
+    }
+    
+    .tituloG {
+        margin-bottom: 3%;
+        color: #f22771;
+        font-size: 2rem;
+    }
+    
+    .subtituloG {
+        margin-bottom: 3%;
+        color: #f22771;
+        font-size: 1.5rem;
+    }
+    
+    .mensajeG {
+        font-size: 1.5rem;
+        margin-bottom: 5%;
+    }
+    
+    .buton {
+        margin-top: 3%;
+    }
 
 }
 
-.tituloG {
-    margin-bottom: 3%;
-    color: #f22771;
-    font-size: 2rem;
-}
 
-.subtituloG {
-    margin-bottom: 3%;
-    color: #f22771;
-    font-size: 1.5rem;
-}
-
-.mensajeG {
-    font-size: 1.5rem;
-    margin-bottom: 5%;
-}
-
-.buton {
-    margin-top: 3%;
-}
 
 /*FOOTER*/
 
-@media (max-width: 575px){}
-@media (min-width:576px) and (max-width:767px) {}
-@media (min-width:768px) and (max-width:991px) {}
+
 @media (min-width:992px) and (max-width:1199px) {}
 @media (min-width:1200px) and (max-width:1399px) {}
 @media (min-width:1400px){
