@@ -22,7 +22,6 @@
         margin-left: 70%;
     }
 
-
     .navbar {
         display: flex;
         align-items: center ;
@@ -63,10 +62,7 @@
         display: block;
     }
 
-    /* .menu-content ul {
-        list-style: none;
-        padding: 0;
-    } */
+    
 
     .menu-content ul li {
         margin-bottom: 10px;
@@ -78,7 +74,8 @@
     }
 
     .logo {
-        margin-left: 60%;
+        margin-left: 5%;
+     
     }
 
     .navbar-collapse{
@@ -305,14 +302,132 @@
 
 /*CARRITO*/
 
-@media (max-width: 575px){}
+@media (max-width: 575px){
+    
+    .carrito {
+        position: relative;
+        background-color: #FFFFFF;
+        width: 300px; 
+        height: 500px; 
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        overflow-y: auto;
+        z-index: 1;
+        bottom: 500px;
+        right: 25px;
+        
+    }
+
+    #container {
+        display: flex;
+    }
+
+    #innerCarrito {
+        background-color: #FFFFFF;
+        max-height: 55%; 
+        overflow-y: auto; 
+    }
+
+    .imgCarrito {
+        width: 25%;
+        margin-left: 5%;
+        margin-top: 5%;
+
+    }
+
+    .nombre {
+        font-family: "Roboto";
+        font-size: 1rem;
+        margin-left: 35%;
+        margin-top: -32% ;
+    }
+
+    .titCarrito {
+        background-color: #000000;
+        border-radius: 2%;
+        color: #FFFFFF;
+        font-family: "Roboto";
+        padding: 5% 0% 5% 40% ;
+    }
+
+    .infoCarrito {
+        display: inline;
+        margin-top: 0%;
+    }
+
+    .signoMinus {
+        width: 8%;
+        margin-left: 35%;
+        margin-top: 3%;
+    
+    }
+
+    .signoMinus:hover {
+        filter: drop-shadow(0 2px 5px rgba(0, 0, 0, 0.7));
+    }
+
+    .numero {
+        font-size: 1.2rem;
+        margin-left: 50%;
+        margin-top: -8%;
+    }
+
+    .signoPlus {
+        width: 8%;
+        margin-left: 60%;
+        margin-top: -34%;
+    
+    }
+
+    .signoPlus:hover { 
+        filter: drop-shadow(0 2px 5px rgba(0, 0, 0, 0.7));
+    }
+
+    .trash {
+        width: 8%;
+        margin-left: 85%;
+        margin-top: -75%;
+    }
+
+    .trash:hover {
+        filter: drop-shadow(0 2px 5px rgba(0, 0, 0, 0.7)); 
+    }
+
+    .precio {
+        font-family: "Roboto";
+        margin-left: 80%;
+        margin-bottom: 1%;
+        margin-top: -20%;
+    }
+
+    .total {
+        margin-left: 6%;
+        margin-top: 8%;
+    }
+
+    .precioTotal {
+        margin-left: 80%;
+        margin-top: -14%;
+    }
+
+    .pagar {
+        background-color: #000000;
+        color: #FFFFFF;
+        padding: 4% 5% 4% 45%;
+        border-radius: 2%;
+        margin-top: 16%;
+        margin-bottom: -5%;
+    }
+
+
+
+}
 @media (min-width:576px) and (max-width:767px) {}
 @media (min-width:768px) and (max-width:991px) {}
 @media (min-width:992px) and (max-width:1199px) {}
 @media (min-width:1200px) and (max-width:1399px) {}
-@media (min-width:1400px){}
+@media (min-width:1400px){
 
-.carrito {
+    .carrito {
     position:fixed;
     background-color: #FFFFFF;
     width: 300px; 
@@ -323,108 +438,110 @@
     bottom: 150px;
     right: 25px;
     
-}
+    }
 
-#container {
-    display: flex;
-  }
+    #container {
+        display: flex;
+    }
 
-#innerCarrito {
-    background-color: #FFFFFF;
-    max-height: 55%; 
-    overflow-y: auto; 
-}
+    #innerCarrito {
+        background-color: #FFFFFF;
+        max-height: 55%; 
+        overflow-y: auto; 
+    }
 
-.imgCarrito {
-    width: 25%;
-    margin-left: 5%;
-    margin-top: 5%;
+    .imgCarrito {
+        width: 25%;
+        margin-left: 5%;
+        margin-top: 5%;
 
-}
+    }
 
-.nombre {
-    font-family: "Roboto";
-    font-size: 1rem;
-    margin-left: 35%;
-    margin-top: -32% ;
-}
+    .nombre {
+        font-family: "Roboto";
+        font-size: 1rem;
+        margin-left: 35%;
+        margin-top: -32% ;
+    }
 
-.titCarrito {
-    background-color: #000000;
-    border-radius: 2%;
-    color: #FFFFFF;
-    font-family: "Roboto";
-    padding: 5% 0% 5% 40% ;
-}
+    .titCarrito {
+        background-color: #000000;
+        border-radius: 2%;
+        color: #FFFFFF;
+        font-family: "Roboto";
+        padding: 5% 0% 5% 40% ;
+    }
 
-.infoCarrito {
-    display: inline;
-    margin-top: 0%;
-}
+    .infoCarrito {
+        display: inline;
+        margin-top: 0%;
+    }
 
-.signoMinus {
-    width: 8%;
-    margin-left: 35%;
-    margin-top: 3%;
-   
-}
+    .signoMinus {
+        width: 8%;
+        margin-left: 35%;
+        margin-top: 3%;
+    
+    }
 
-.signoMinus:hover {
-    filter: drop-shadow(0 2px 5px rgba(0, 0, 0, 0.7));
-}
+    .signoMinus:hover {
+        filter: drop-shadow(0 2px 5px rgba(0, 0, 0, 0.7));
+    }
 
-.numero {
-    font-size: 1.2rem;
-    margin-left: 50%;
-    margin-top: -8%;
-}
+    .numero {
+        font-size: 1.2rem;
+        margin-left: 50%;
+        margin-top: -8%;
+    }
 
-.signoPlus {
-    width: 8%;
-    margin-left: 60%;
-    margin-top: -34%;
-  
-}
+    .signoPlus {
+        width: 8%;
+        margin-left: 60%;
+        margin-top: -34%;
+    
+    }
 
-.signoPlus:hover { 
-    filter: drop-shadow(0 2px 5px rgba(0, 0, 0, 0.7));
-}
+    .signoPlus:hover { 
+        filter: drop-shadow(0 2px 5px rgba(0, 0, 0, 0.7));
+    }
 
-.trash {
-    width: 8%;
-    margin-left: 85%;
-    margin-top: -75%;
-}
+    .trash {
+        width: 8%;
+        margin-left: 85%;
+        margin-top: -75%;
+    }
 
-.trash:hover {
-    filter: drop-shadow(0 2px 5px rgba(0, 0, 0, 0.7)); 
-}
+    .trash:hover {
+        filter: drop-shadow(0 2px 5px rgba(0, 0, 0, 0.7)); 
+    }
 
-.precio {
-    font-family: "Roboto";
-    margin-left: 80%;
-    margin-bottom: 1%;
-    margin-top: -20%;
-}
+    .precio {
+        font-family: "Roboto";
+        margin-left: 80%;
+        margin-bottom: 1%;
+        margin-top: -20%;
+    }
 
-.total {
-    margin-left: 6%;
-    margin-top: 8%;
-}
+    .total {
+        margin-left: 6%;
+        margin-top: 8%;
+    }
 
-.precioTotal {
-    margin-left: 80%;
-    margin-top: -14%;
-}
+    .precioTotal {
+        margin-left: 80%;
+        margin-top: -14%;
+    }
 
-.pagar {
-    background-color: #000000;
-    color: #FFFFFF;
-    padding: 4% 5% 4% 45%;
-    border-radius: 2%;
-    margin-top: 16%;
-    margin-bottom: -5%;
-}
+    .pagar {
+        background-color: #000000;
+        color: #FFFFFF;
+        padding: 4% 5% 4% 45%;
+        border-radius: 2%;
+        margin-top: 16%;
+        margin-bottom: -5%;
+    }
+
+}    
 
 
 /*FORMULARIO DE ENVIOS*/
@@ -452,6 +569,9 @@
     --bs-btn-active-bg: #f09ab7;
     --bs-btn-disabled-bg: #f09ab7;
 }
+
+
+
 
 
 
