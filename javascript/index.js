@@ -63,7 +63,7 @@ function addCarrito(){
                             '<hr style="width:100%", size="1", color=black>'+
                             '<p class="total">Total:</p>'+
                             '<p class="precioTotal">$'+totalCarrito+'</p>'+
-                            '<p class="pagar">Pagar</p>'+
+                            '<a href="../pages/formulario.html" class="decoration"><p class="pagar">Pagar</p></a>'+
                         '</div>'+
                     '</div>';   
    
