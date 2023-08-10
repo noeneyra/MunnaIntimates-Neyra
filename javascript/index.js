@@ -45,10 +45,10 @@ function addCarrito(){
                         '<img src="'+ found.imgSrc +'" class="imgCarrito" alt="Set Ashley">'+
                         '<h1 class="nombre">'+ found.category + ' ' + found.name+'</h1>'+
                         '<div class="infoCarrito">'+
-                            '<img src="./images/minus.png" onclick="removeItem(\'' + found.id + '\')" class="signoMinus" alt="minus">'+
+                            '<img src="../images/minus.png" onclick="removeItem(\'' + found.id + '\')" class="signoMinus" alt="minus">'+
                             '<p class="numero" id="'+ idOcu +'">'+ 1 +'</p>'+
-                            '<img src="./images/plus.png" onclick="addItem(\'' + found.id + '\')" class="signoPlus" alt="plus">'+
-                            '<img src="./images/trash.png" onclick="borrarItem(\'' + found.id + '\')" class="trash hover" alt="Trash">'+
+                            '<img src="../images/plus.png" onclick="addItem(\'' + found.id + '\')" class="signoPlus" alt="plus">'+
+                            '<img src="../images/trash.png" onclick="borrarItem(\'' + found.id + '\')" class="trash hover" alt="Trash">'+
                             '<p class="precio" id="'+idPre+'">$' + found.price+'</p>'+
                             '<hr style="width:80%;margin-left:10%", size="1", color=black>'+
                         '</div>'+
