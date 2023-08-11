@@ -2,14 +2,14 @@
 var prendas = [];
 var prendasSeleccionadas = [];
 
+
+prendas = buildSets();
+prendas = prendas.concat(buildBombis());
+prendas = prendas.concat(buildShine());
+
 function initProducts(){
 
     const ele = document.getElementById('items');
-
-    prendas = buildSets();
-    prendas = prendas.concat(buildBombis());
-    prendas = prendas.concat(buildShine());
-
     prendas.forEach(element =>{
         const card = '<div class="card flex-child imgZoom">' +
          '<img src="' + element.imgSrc + '" alt="Set Ashley" style="width:100%">' + 
@@ -25,115 +25,122 @@ function initProducts(){
 }
 
 function addCarrito(){
-
-    const element = document.getElementById('carritos');
-    let found = prendas.find(element => element.id == event.target.id);
- 
-    prendasSeleccionadas.push(found);
-    console.log(prendasSeleccionadas);
-    let ocurrencias = prendasSeleccionadas.reduce((count,value)=>
-        (value.id == event.target.id ? count + 1 : count),0 
-    );
-    let totalCarrito = prendasSeleccionadas.reduce((count,value)=>
-        (count + value.price),0
-    );
-    let idDiv = 'delete'+found.id;
-    let idOcu = 'ocurrencias'+found.id;
-    let idPre = 'precio'+found.id;
+    let foundPrenda = prendas.find(element => element.id == event.target.id);
+    let foundSeleccionada = prendasSeleccionadas.find(element => element.id == event.target.id);
+    if(foundSeleccionada == null){
+        prendasSeleccionadas.push({
+            id: foundPrenda.id,
+            cantidad: 1,
+            item: foundPrenda,
+            nameItem: foundPrenda.category.toLowerCase() + '_' + foundPrenda.name.toLowerCase(),
+            precioT: foundPrenda.price
+        });
+    }else{
+        foundSeleccionada.cantidad += 1;
+        foundSeleccionada.precioT = foundSeleccionada.item.price * foundSeleccionada.cantidad;
+    }
+    if(prendasSeleccionadas.length == 1){
+        drawCarrito(prendasSeleccionadas);
+    }else if(prendasSeleccionadas.length > 1){
+        drawCarritoItem(prendasSeleccionadas);
+    }
     
-    const innerCarrito ='<div id="'+ idDiv +'">'+
-                        '<img src="'+ found.imgSrc +'" class="imgCarrito" alt="Set Ashley">'+
-                        '<h1 class="nombre">'+ found.category + ' ' + found.name+'</h1>'+
-                        '<div class="infoCarrito">'+
-                            '<img src="../images/minus.png" onclick="removeItem(\'' + found.id + '\')" class="signoMinus" alt="minus">'+
-                            '<p class="numero" id="'+ idOcu +'">'+ 1 +'</p>'+
-                            '<img src="../images/plus.png" onclick="addItem(\'' + found.id + '\')" class="signoPlus" alt="plus">'+
-                            '<img src="../images/trash.png" onclick="borrarItem(\'' + found.id + '\')" class="trash hover" alt="Trash">'+
-                            '<p class="precio" id="'+idPre+'">$' + found.price+'</p>'+
-                            '<hr style="width:80%;margin-left:10%", size="1", color=black>'+
-                        '</div>'+
-                        '</div>';
+}
 
-    const bodyCard = '<div id="carrito" class="carrito fixed">'+
+
+function drawCarrito(lstFound){
+    const element = document.getElementById('carritos');
+    const bodyCard = '<div id="carrito" class="carrito">'+
                         '<div class="titCarrito">'+
                             'Tu carrito' +
-                        '</div>'+
-                        '<div id="innerCarrito" class="overflow-scroll">' + innerCarrito + '</div>'+
-                        '<div class="pagos">'+
-                            '<hr style="width:100%", size="1", color=black>'+
+                        '</div id="innerCarrito">'+
+                        '<div id="innerCarrito"> </div>'+
+                        '<div>'+
+                            '<hr style="width:100%", size="4", color=black>'+
                             '<p class="total">Total:</p>'+
-                            '<p class="precioTotal">$'+totalCarrito+'</p>'+
-                            '<a href="../pages/formulario.html" class="decoration"><p class="pagar">Pagar</p></a>'+
+                            '<p class="precioTotal" id="precioTotal"> </p>'+
+                            '<a href="../pages/formulario.html" class="decoration"><p class="pagar" >Pagar</p></a>'+
                         '</div>'+
-                    '</div>';   
-   
-    if(prendasSeleccionadas.length == 1){
-        const el = document.createElement('div');
-        el.style.position = 'relative';
-        el.removeAttribute('hidden');
-        el.innerHTML = bodyCard;
-        element.appendChild(el);
-    }else{
-        var foundInner = document.getElementById(idDiv);
-        if(foundInner != null){
-            var vecesRepetido = document.getElementById(idOcu);
-            var precio = document.getElementById(idPre);
-            precio.innerHTML = ocurrencias * found.price;
-            vecesRepetido.innerHTML = ocurrencias;
-        }else{
-            const inner = document.getElementById('innerCarrito');
-            inner.innerHTML += innerCarrito;
-        }
-    }
-
+                    '</div>';
+    const el = document.createElement('div');
+    el.removeAttribute('hidden');
+    el.innerHTML = bodyCard;
+    element.appendChild(el);
     const elementTwo = document.getElementById('items');
     console.log(elementTwo);
     elementTwo.style.width = '80%';
+    drawCarritoItem(lstFound);
 
 }
 
+function drawCarritoItem(lstFound){
+    const inner = document.getElementById('innerCarrito');
+    const total = document.getElementById('precioTotal');
+    let totalPesos = 0;
+    let innerCarrito = '';
+    lstFound.forEach(element => {
+        totalPesos += element.precioT;
+        innerCarrito +='<div id="'+ element.nameItem +'">'+
+                        '<img src="'+ element.item.imgSrc +'" class="imgCarrito" alt="Set Ashley">'+
+                        '<h1 class="nombre">'+ element.item.category + ' ' + element.item.name+'</h1>'+
+                        '<div class="infoCarrito">'+
+                            '<img src="/images/minus.png" onclick="removeItem(\'' + element.item.id + '\')" class="signoMinus" alt="minus">'+
+                            '<p class="numero">'+ element.cantidad +'</p>'+
+                            '<img src="/images/plus.png" onclick="addItem(\'' + element.item.id + '\')" class="signoPlus" alt="plus">'+
+                            '<img src="/images/trash.png" onclick="borrarItem(\'' + element.nameItem + '\')" class="trash" alt="Trash">'+
+                            '<p class="precio">' + element.precioT+'</p>'+
+                        '</div>'+
+                        '</div>';
+
+    });
+    inner.innerHTML = innerCarrito;
+    total.innerHTML = '$' + totalPesos;
+}
+
+
 function addItem(idFound){
-    let idOcu = 'ocurrencias'+idFound;
-    let idPre = 'precio'+idFound;
-    let vecesRepetido = document.getElementById(idOcu);
-    let precio = document.getElementById(idPre);
-
-    let ocurrenciasActuales = Number(vecesRepetido.innerHTML) + 1;
-    let found = prendasSeleccionadas.find(element => element.id == idFound);
-    vecesRepetido.innerHTML = ocurrenciasActuales;
-    precio.innerHTML = found.price * ocurrenciasActuales;
-
+    let foundPrenda = prendasSeleccionadas.find(element => element.id == idFound);
+    console.log(foundPrenda);
+    if(foundPrenda != null){
+        foundPrenda.cantidad += 1;
+        foundPrenda.precioT = foundPrenda.item.price * foundPrenda.cantidad;
+    }
+    drawCarritoItem(prendasSeleccionadas);
 }
 
 function removeItem(idFound){
-    let idOcu = 'ocurrencias'+idFound;
-    let idPre = 'precio'+idFound;
-    let vecesRepetido = document.getElementById(idOcu);
-    let precio = document.getElementById(idPre);
-
-    let ocurrenciasActuales = Number(vecesRepetido.innerHTML) - 1;
-    if(ocurrenciasActuales == 0){
-        borrarItem(idFound);
-    }else{
-        let found = prendasSeleccionadas.find(element => element.id == idFound);
-        vecesRepetido.innerHTML = ocurrenciasActuales;
-        precio.innerHTML = found.price * ocurrenciasActuales;
+    let foundPrenda = prendasSeleccionadas.find(element => element.id == idFound);
+    if(foundPrenda != null){
+        foundPrenda.cantidad -= 1;
+        if(foundPrenda.cantidad == 0){
+            console.log(foundPrenda.nameItem);
+            borrarItem(foundPrenda.nameItem);
+        }else{
+            foundPrenda.precioT = foundPrenda.item.price * foundPrenda.cantidad;
+        }
+        
     }
-
+    drawCarritoItem(prendasSeleccionadas); 
 }
 
-function borrarItem(found){
-
-    prendasSeleccionadas = prendasSeleccionadas.filter(element => element.id != found);
-
-    const row = document.getElementById('delete'+found);
+function borrarItem(nameFound){
+    console.log(nameFound);
+    const row = document.getElementById(nameFound);
     row.remove();
+    let index = prendasSeleccionadas.findIndex(element => element.nameItem == nameFound);
+    console.log(index);
+    if(index >= 0){
+        prendasSeleccionadas.splice(index,1);
+    }
+    console.log(prendasSeleccionadas);
     if(prendasSeleccionadas.length == 0){
         const carrito = document.getElementById('carrito');
         carrito.remove();
         const elementTwo = document.getElementById('items');
         console.log(elementTwo);
         elementTwo.style.width = '100%';
+    }else{
+        drawCarritoItem(prendasSeleccionadas);
     }
 }
 
