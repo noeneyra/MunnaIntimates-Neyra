@@ -84,10 +84,10 @@ function drawCarritoItem(lstFound){
                         '<img src="'+ element.item.imgSrc +'" class="imgCarrito" alt="Set Ashley">'+
                         '<h1 class="nombre">'+ element.item.category + ' ' + element.item.name+'</h1>'+
                         '<div class="infoCarrito">'+
-                            '<img src="/images/minus.png" onclick="removeItem(\'' + element.item.id + '\')" class="signoMinus" alt="minus">'+
+                            '<img src="../images/minus.png" onclick="removeItem(\'' + element.item.id + '\')" class="signoMinus" alt="minus">'+
                             '<p class="numero">'+ element.cantidad +'</p>'+
-                            '<img src="/images/plus.png" onclick="addItem(\'' + element.item.id + '\')" class="signoPlus" alt="plus">'+
-                            '<img src="/images/trash.png" onclick="borrarItem(\'' + element.nameItem + '\')" class="trash" alt="Trash">'+
+                            '<img src="../images/plus.png" onclick="addItem(\'' + element.item.id + '\')" class="signoPlus" alt="plus">'+
+                            '<img src="../images/trash.png" onclick="borrarItem(\'' + element.nameItem + '\')" class="trash" alt="Trash">'+
                             '<p class="precio">' + element.precioT+'</p>'+
                         '</div>'+
                         '</div>';
